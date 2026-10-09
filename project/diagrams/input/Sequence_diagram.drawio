@@ -41,10 +41,10 @@
           <mxGeometry height="60" width="120" x="1400" y="-980" as="geometry" />
         </mxCell>
         <mxCell id="i4Paxbq496dbUvfONKyn-82" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;entryX=0.5;entryY=0.141;entryDx=0;entryDy=0;strokeColor=#333333;" value="read()">
-          <mxGeometry relative="1" x="-0.1897" as="geometry">
+          <mxGeometry relative="1" x="-0.1317" as="geometry">
             <mxPoint as="offset" />
             <Array as="points" />
-            <mxPoint x="870" y="-830" as="sourcePoint" />
+            <mxPoint x="860" y="-830" as="sourcePoint" />
             <mxPoint x="1065" y="-830" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -85,11 +85,11 @@
             <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9TZeJeEL3YVpgHiB4yFd-9" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;entryX=0.5;entryY=0.141;entryDx=0;entryDy=0;strokeColor=#333333;" value="isThresholdExceeded(r)">
-          <mxGeometry relative="1" x="-0.1897" as="geometry">
+        <mxCell id="9TZeJeEL3YVpgHiB4yFd-9" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;entryX=0.5;entryY=0.141;entryDx=0;entryDy=0;strokeColor=#333333;" value="shouldAlert(r)">
+          <mxGeometry relative="1" x="-0.1317" as="geometry">
             <mxPoint as="offset" />
             <Array as="points" />
-            <mxPoint x="870" y="-730" as="sourcePoint" />
+            <mxPoint x="860" y="-730" as="sourcePoint" />
             <mxPoint x="1065" y="-730" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -123,7 +123,7 @@
             <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9TZeJeEL3YVpgHiB4yFd-20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeColor=#333333;" value="isThresholdExceeded(r)">
+        <mxCell id="9TZeJeEL3YVpgHiB4yFd-20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeColor=#333333;" value="shouldAlert(r)">
           <mxGeometry relative="1" x="-0.085" as="geometry">
             <mxPoint as="offset" />
             <Array as="points" />
@@ -161,7 +161,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9TZeJeEL3YVpgHiB4yFd-28" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeColor=#333333;" value="isThresholdExceeded(r)">
+        <mxCell id="9TZeJeEL3YVpgHiB4yFd-28" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeColor=#333333;" value="shouldAlert(r)">
           <mxGeometry relative="1" x="-0.0498" as="geometry">
             <mxPoint as="offset" />
             <Array as="points" />
