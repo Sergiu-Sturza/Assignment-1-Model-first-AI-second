@@ -1,5 +1,7 @@
 # Cabin monitor — analysis of the input set
 
+> **Superseded by [2026-10-09 analysis (v2)](2026-10-09-cabin-monitor-input-set-analysis-v2.md)** — this file describes the input set before commits `0ee2744`…`6092ffb`.
+
 **Date:** 2026-09-29 · **Scope:** the five drawings in [`project/diagrams/input/`](../project/diagrams/input/) · **Status:** exploration complete, implementation not started
 
 This document records what the input set says, where it is ambiguous, contradictory or incomplete,
