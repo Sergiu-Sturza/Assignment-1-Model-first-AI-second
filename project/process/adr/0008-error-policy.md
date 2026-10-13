@@ -1,4 +1,4 @@
-# ADR-0011: Error policy — exceptions for invalid input, no-op for unknown ids
+# ADR-0008: Error policy — exceptions for invalid input, no-op for unknown ids
 
 **Status:** Accepted · **Date:** 2026-10-13
 

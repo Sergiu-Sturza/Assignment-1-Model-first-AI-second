@@ -1,6 +1,6 @@
 # ADR-0007: `friend` exception to keep the sequence trace exact
 
-**Status:** Accepted · **Date:** 2026-10-13
+**Status:** Superseded by [ADR-0011](0011-friend-exception-revised.md) · **Date:** 2026-10-13
 
 ## Context
 The sequence verifier builds without optimizations and with `-finstrument-functions`. It records
