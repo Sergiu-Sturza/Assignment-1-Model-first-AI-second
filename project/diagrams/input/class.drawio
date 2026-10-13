@@ -208,7 +208,7 @@
                 <mxCell id="z1855anZEwJJAeXwLioJ-6" parent="grugZeN3CHeiJIGbphrh-15" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" value="+ removeCabin(id: int): void" vertex="1">
                     <mxGeometry height="26" width="200" y="164" as="geometry"/>
                 </mxCell>
-                <mxCell id="-8h50kfglePDPKazFkve-0" parent="grugZeN3CHeiJIGbphrh-15" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" value="+ addAlerts(): void" vertex="1">
+                <mxCell id="-8h50kfglePDPKazFkve-0" parent="grugZeN3CHeiJIGbphrh-15" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" value="+ addAlerts(alert: Alert): void" vertex="1">
                     <mxGeometry height="26" width="200" y="190" as="geometry"/>
                 </mxCell>
                 <mxCell id="DXa-JFj0sgl4FdKhsy5u-35" parent="grugZeN3CHeiJIGbphrh-15" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" value="+ getCabins(): Cabin[]" vertex="1">
