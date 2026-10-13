@@ -16,6 +16,6 @@ editing the input drawings.
 
 ## Consequences
 - The class report stays at, or near, 100 %.
-- Some designs look odd in C++: getters with no setters, and no `addAlert` (ADR-0013). Each
+- Some designs look odd in C++: getters with no setters. Each
   oddity is documented rather than "fixed" in code.
 - Only the team can fix a drawing problem, which ties the implementation to their schedule.

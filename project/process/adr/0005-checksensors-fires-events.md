@@ -19,5 +19,4 @@ in *Alerting user* forever.
 ## Consequences
 - No undrawn class or method is needed, and the state and sequence reports can reach 100 %.
 - *Alerting user* lasts only for the moment between the two events.
-- `User::alerts_` stays empty until ADR-0013 is decided.
 - The events are calls a class makes to itself, so they don't add sequence messages.
