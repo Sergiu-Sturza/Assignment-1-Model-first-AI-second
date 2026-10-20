@@ -1,3 +1,17 @@
 {
-    "cmake.sourceDirectory": "C:/Users/ellen/Documents/Assignment 1/Assignment-1-Model-first-AI-second/project/impl"
+    // CMake Tools: the project's CMakeLists.txt is in project/impl, not at the workspace root.
+    "cmake.sourceDirectory": "${workspaceFolder}/project/impl",
+    "cmake.buildDirectory": "${workspaceFolder}/project/build",
+    "cmake.generator": "Ninja",
+    "cmake.cmakePath": "C:/msys64/ucrt64/bin/cmake.exe",
+    "cmake.configureOnOpen": true,
+
+    // IntelliSense takes include paths and the C++ standard from CMake.
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/project/build/compile_commands.json",
+    "C_Cpp.default.cppStandard": "c++20",
+
+    // Hide the editor's "Run C/C++ File" button: it compiles one file without the project's
+    // include path or C++20, so it fails on every file here. Build with CMake instead.
+    "C_Cpp.debugShortcut": false
 }
