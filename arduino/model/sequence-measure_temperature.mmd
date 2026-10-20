@@ -1,0 +1,27 @@
+%% One measurement that is too hot: the buzzer starts, the LCD and the website are told.
+%% Source of diagrams/input/sequence-measure_temperature.drawio.
+sequenceDiagram
+    actor Loop
+    participant TemperatureMonitor
+    participant IntervalTimer
+    participant TemperatureSensor
+    participant Threshold
+    participant Buzzer
+    participant LcdDisplay
+    participant MessageFormatter
+    participant SerialLink
+    Loop->>TemperatureMonitor: update(nowMs)
+    TemperatureMonitor->>IntervalTimer: isDue(nowMs)
+    IntervalTimer-->>TemperatureMonitor: true
+    TemperatureMonitor->>TemperatureSensor: read()
+    TemperatureSensor-->>TemperatureMonitor: 31.5
+    TemperatureMonitor->>Threshold: classify(celsius)
+    Threshold-->>TemperatureMonitor: TooHigh
+    TemperatureMonitor->>TemperatureMonitor: handle(TemperatureOutOfRange)
+    TemperatureMonitor->>Buzzer: turnOn()
+    TemperatureMonitor->>LcdDisplay: showTemperature(celsius, status)
+    TemperatureMonitor->>MessageFormatter: formatReading(celsius, status, threshold)
+    MessageFormatter->>Threshold: getLow()
+    MessageFormatter->>Threshold: getHigh()
+    MessageFormatter-->>TemperatureMonitor: "T,31.5,HIGH,18.0,28.0"
+    TemperatureMonitor->>SerialLink: writeLine(text)

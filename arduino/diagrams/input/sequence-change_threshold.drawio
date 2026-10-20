@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="umlverify" version="24.7.17">
+  <diagram name="change_threshold" id="page">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="page-0" />
+        <mxCell id="page-1" parent="page-0" />
+        <mxCell id="page-l0" value="Loop" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;portConstraint=eastwest;size=40;" vertex="1" parent="page-1">
+          <mxGeometry x="40" y="40" width="30" height="614" as="geometry" />
+        </mxCell>
+        <mxCell id="page-l1" value="CommandHandler" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=40;" vertex="1" parent="page-1">
+          <mxGeometry x="130" y="40" width="129" height="614" as="geometry" />
+        </mxCell>
+        <mxCell id="page-l2" value="SerialLink" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=40;" vertex="1" parent="page-1">
+          <mxGeometry x="319" y="40" width="100" height="614" as="geometry" />
+        </mxCell>
+        <mxCell id="page-l3" value="CommandParser" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=40;" vertex="1" parent="page-1">
+          <mxGeometry x="479" y="40" width="121" height="614" as="geometry" />
+        </mxCell>
+        <mxCell id="page-l4" value="Threshold" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=40;" vertex="1" parent="page-1">
+          <mxGeometry x="660" y="40" width="100" height="614" as="geometry" />
+        </mxCell>
+        <mxCell id="page-l5" value="MessageFormatter" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=40;" vertex="1" parent="page-1">
+          <mxGeometry x="820" y="40" width="144" height="614" as="geometry" />
+        </mxCell>
+        <mxCell id="page-m0" value="poll()" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;curved=0;rounded=0;exitX=0.5;exitY=0.1792;exitPerimeter=0;entryX=0.5;entryY=0.1792;entryPerimeter=0;" edge="1" parent="page-1" source="page-l0" target="page-l1">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-m1" value="readLine()" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;curved=0;rounded=0;exitX=0.5;exitY=0.2443;exitPerimeter=0;entryX=0.5;entryY=0.2443;entryPerimeter=0;" edge="1" parent="page-1" source="page-l1" target="page-l2">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-m2" value="&amp;quot;SET,20.0,30.0&amp;quot;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;endSize=8;dashed=1;curved=0;rounded=0;exitX=0.5;exitY=0.3094;exitPerimeter=0;entryX=0.5;entryY=0.3094;entryPerimeter=0;" edge="1" parent="page-1" source="page-l2" target="page-l1">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-m3" value="parse(line)" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;curved=0;rounded=0;exitX=0.5;exitY=0.3746;exitPerimeter=0;entryX=0.5;entryY=0.3746;entryPerimeter=0;" edge="1" parent="page-1" source="page-l1" target="page-l3">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-m4" value="command" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;endSize=8;dashed=1;curved=0;rounded=0;exitX=0.5;exitY=0.4397;exitPerimeter=0;entryX=0.5;entryY=0.4397;entryPerimeter=0;" edge="1" parent="page-1" source="page-l3" target="page-l1">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-m5" value="set(low, high)" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;curved=0;rounded=0;exitX=0.5;exitY=0.5049;exitPerimeter=0;entryX=0.5;entryY=0.5049;entryPerimeter=0;" edge="1" parent="page-1" source="page-l1" target="page-l4">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-m6" value="true" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;endSize=8;dashed=1;curved=0;rounded=0;exitX=0.5;exitY=0.5700;exitPerimeter=0;entryX=0.5;entryY=0.5700;entryPerimeter=0;" edge="1" parent="page-1" source="page-l4" target="page-l1">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-m7" value="formatThreshold(threshold)" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;curved=0;rounded=0;exitX=0.5;exitY=0.6352;exitPerimeter=0;entryX=0.5;entryY=0.6352;entryPerimeter=0;" edge="1" parent="page-1" source="page-l1" target="page-l5">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-m8" value="getLow()" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;curved=0;rounded=0;exitX=0.5;exitY=0.7003;exitPerimeter=0;entryX=0.5;entryY=0.7003;entryPerimeter=0;" edge="1" parent="page-1" source="page-l5" target="page-l4">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-m9" value="getHigh()" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;curved=0;rounded=0;exitX=0.5;exitY=0.7655;exitPerimeter=0;entryX=0.5;entryY=0.7655;entryPerimeter=0;" edge="1" parent="page-1" source="page-l5" target="page-l4">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-m10" value="&amp;quot;TH,20.0,30.0&amp;quot;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;endSize=8;dashed=1;curved=0;rounded=0;exitX=0.5;exitY=0.8306;exitPerimeter=0;entryX=0.5;entryY=0.8306;entryPerimeter=0;" edge="1" parent="page-1" source="page-l5" target="page-l1">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-m11" value="writeLine(text)" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;curved=0;rounded=0;exitX=0.5;exitY=0.8958;exitPerimeter=0;entryX=0.5;entryY=0.8958;entryPerimeter=0;" edge="1" parent="page-1" source="page-l1" target="page-l2">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

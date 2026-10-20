@@ -1,0 +1,27 @@
+#pragma once
+
+// How this board is wired, and the values it starts with. The only file to change for
+// other pins, another LCD or another start threshold.
+
+#include <stdint.h>
+
+namespace board {
+
+const uint8_t sensorPin = 2;      // DHT11 data
+const uint8_t buzzerPin = 8;      // active buzzer, + to the pin, - to GND
+// LCD on I2C: Uno SDA = A4, SCL = A5 | Mega SDA = 20, SCL = 21
+const uint8_t lcdAddress = 0x27;  // try 0x3F if the screen stays blank
+const uint8_t lcdColumns = 16;
+const uint8_t lcdRows = 2;
+
+const unsigned long baudRate = 115200;     // the website connects at the same rate
+const uint32_t measureIntervalMs = 2000;   // the DHT11 needs at least 1 s between reads
+
+// The threshold at power-on, in °C; the website changes it with "SET,<low>,<high>".
+const float startLow = 18.0f;
+const float startHigh = 28.0f;
+
+/// Starts the serial port, the sensor, the LCD and the buzzer pin (in hal_arduino.cpp).
+void begin();
+
+}  // namespace board

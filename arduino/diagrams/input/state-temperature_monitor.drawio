@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net" agent="umlverify" version="24.7.17">
+  <diagram name="TemperatureMonitor" id="page">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="page-0" />
+        <mxCell id="page-1" parent="page-0" />
+        <mxCell id="page-s2" value="Normal" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="page-1">
+          <mxGeometry x="120" y="120" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="page-s3" value="Alarming" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="page-1">
+          <mxGeometry x="620" y="120" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="page-s4" value="Sensor fault" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="page-1">
+          <mxGeometry x="370" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="page-i5" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="page-1">
+          <mxGeometry x="50" y="135" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="page-e6" value="" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;exitX=1;exitY=0.5000;entryX=0;entryY=0.5000;" edge="1" parent="page-1" source="page-i5" target="page-s2">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-e7" value="TemperatureOutOfRange / startAlarm" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;exitX=1;exitY=0.3;entryX=0;entryY=0.3;" edge="1" parent="page-1" source="page-s2" target="page-s3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-e8" value="SensorFailed" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;exitX=0.6;exitY=1;entryX=0;entryY=0.25;" edge="1" parent="page-1" source="page-s2" target="page-s4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="216" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-e9" value="TemperatureOk / stopAlarm" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;exitX=0;exitY=0.7;entryX=1;entryY=0.7;" edge="1" parent="page-1" source="page-s3" target="page-s2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-e10" value="SensorFailed / stopAlarm" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;exitX=0.4;exitY=1;entryX=1;entryY=0.25;" edge="1" parent="page-1" source="page-s3" target="page-s4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="684" y="415" />
+            </Array>
+            <mxPoint x="-45" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-e11" value="TemperatureOk" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;exitX=0;exitY=0.75;entryX=0.3;entryY=1;" edge="1" parent="page-1" source="page-s4" target="page-s2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="168" y="445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="page-e12" value="TemperatureOutOfRange / startAlarm" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;exitX=1;exitY=0.75;entryX=0.7;entryY=1;" edge="1" parent="page-1" source="page-s4" target="page-s3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="732" y="445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
