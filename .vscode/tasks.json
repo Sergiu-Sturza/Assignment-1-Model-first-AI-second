@@ -31,6 +31,41 @@
             "options": { "cwd": "${workspaceFolder}" },
             "problemMatcher": [],
             "presentation": { "reveal": "silent", "panel": "dedicated" }
+        },
+        {
+            "label": "Arduino: generate diagrams from the model",
+            "detail": "arduino/model/*.mmd -> arduino/diagrams/input/*.drawio",
+            "type": "shell",
+            "command": ".venv/bin/python -X utf8 arduino/tools/generate_diagrams.py",
+            "windows": { "command": ".\\.venv\\Scripts\\python.exe -X utf8 arduino/tools/generate_diagrams.py" },
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": []
+        },
+        {
+            "label": "Arduino: measure the Figure of Merit",
+            "detail": "Verify, test, benchmark and build the firmware; add one iteration to arduino/fom/",
+            "type": "shell",
+            "command": ".venv/bin/python -X utf8 arduino/tools/fom.py \"${input:iterationNote}\"",
+            "windows": { "command": ".\\.venv\\Scripts\\python.exe -X utf8 arduino/tools/fom.py \"${input:iterationNote}\"" },
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": []
+        },
+        {
+            "label": "Arduino: serve the dashboard",
+            "detail": "http://localhost:8000 (WebSerial needs localhost or HTTPS)",
+            "type": "shell",
+            "command": "python3 -m http.server 8000 --bind 127.0.0.1 -d arduino/dashboard",
+            "windows": { "command": "python -m http.server 8000 --bind 127.0.0.1 -d arduino/dashboard" },
+            "options": { "cwd": "${workspaceFolder}" },
+            "isBackground": true,
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "iterationNote",
+            "type": "promptString",
+            "description": "What changed in this iteration?"
         }
     ]
 }

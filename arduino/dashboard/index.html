@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temperature Alarm</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>Temperature alarm</h1>
+      <p class="subtitle">Arduino · DHT11 · buzzer · LCD — over WebSerial, stored in this browser</p>
+    </div>
+    <div class="connect">
+      <span id="connection" class="pill" data-state="disconnected" role="status">Not connected</span>
+      <button id="demo" type="button" class="secondary">Try without hardware</button>
+      <button id="connect" type="button">Connect Arduino</button>
+    </div>
+  </header>
+
+  <main>
+    <p id="unsupported" class="notice" hidden>
+      This browser has no WebSerial, so it cannot talk to the Arduino. Use Chrome, Edge or Opera on a
+      computer, opened from <code>localhost</code> or HTTPS. “Try without hardware” still works.
+    </p>
+    <p id="storage-problem" class="notice" hidden></p>
+
+    <section class="tiles" aria-label="Now">
+      <article class="tile hero">
+        <h2>Temperature</h2>
+        <p id="current" class="value">—</p>
+        <p id="updated" class="meta">No reading yet</p>
+      </article>
+      <article id="status" class="tile" data-status="none">
+        <h2>Status</h2>
+        <p class="value status-value"><span id="status-icon" aria-hidden="true">·</span> <span id="status-text">Waiting</span></p>
+        <p id="buzzer" class="meta">Buzzer off</p>
+      </article>
+      <article class="tile">
+        <h2>Threshold</h2>
+        <p id="threshold" class="value">—</p>
+        <p class="meta">Alarm outside this range</p>
+      </article>
+      <article class="tile">
+        <h2>Stored readings</h2>
+        <p id="count" class="value">0</p>
+        <p id="count-meta" class="meta">In this browser (IndexedDB)</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Change the threshold</h2>
+      </div>
+      <form id="threshold-form" class="threshold-form" novalidate>
+        <label>Low limit (°C)
+          <input id="low" type="number" step="0.1" min="-40" max="125" required disabled>
+        </label>
+        <label>High limit (°C)
+          <input id="high" type="number" step="0.1" min="-40" max="125" required disabled>
+        </label>
+        <button type="submit" disabled>Send to device</button>
+      </form>
+      <p id="feedback" class="feedback" role="status" aria-live="polite">Connect to change the threshold.</p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Temperature over time</h2>
+        <div class="segmented" role="group" aria-label="Time range">
+          <button type="button" data-range="5m" aria-pressed="true">5 min</button>
+          <button type="button" data-range="1h" aria-pressed="false">1 h</button>
+          <button type="button" data-range="24h" aria-pressed="false">24 h</button>
+          <button type="button" data-range="all" aria-pressed="false">All</button>
+        </div>
+      </div>
+      <div id="chart" class="chart"></div>
+      <p class="legend">
+        <span><span class="key key-line"></span>Temperature</span>
+        <span><span class="key key-band"></span>Threshold range</span>
+        <span><span class="key key-alarm"></span>Outside the threshold (buzzer on)</span>
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Latest readings</h2>
+        <div class="actions">
+          <button id="export" type="button" class="secondary">Export CSV</button>
+          <button id="clear" type="button" class="secondary danger">Clear data</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Time</th><th>Temperature</th><th>Status</th><th>Threshold</th></tr></thead>
+          <tbody id="readings"></tbody>
+        </table>
+        <p id="table-empty" class="meta">Nothing stored yet.</p>
+      </div>
+    </section>
+
+    <details class="card">
+      <summary>Serial log</summary>
+      <ol id="log" class="log"></ol>
+    </details>
+  </main>
+</body>
+</html>

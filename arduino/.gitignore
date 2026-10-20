@@ -1,2 +1,3 @@
-firmware/.build/
-firmware/MICROBIT.hex
+# Build folders: build/ (the verifier), build-trace/ (its traced build), build-fom/ (tests
+# and benchmarks, made by tools/fom.py). The root .gitignore covers the first two.
+build-fom/

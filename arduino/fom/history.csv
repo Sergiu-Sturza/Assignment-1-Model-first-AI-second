@@ -1,0 +1,6 @@
+iteration,date,commit,note,class_pct,state_pct,seq_measure_pct,seq_threshold_pct,design_gap_pct,cpp_tests_passed,cpp_tests_total,js_tests_passed,js_tests_total,update_ns,parse_ns,format_ns,flash_bytes,ram_bytes
+0,2026-10-20,3eb1860+,"Design only: UML model drawn, no C++ yet",0.0,0.0,0.0,0.0,100.0,0,0,0,0,,,,,
+1,2026-10-20,3eb1860+,"First C++ core, scenarios and Arduino sketch",100.0,100.0,100.0,100.0,0.0,0,0,0,0,,,,9702,833
+2,2026-10-20,3eb1860+,Unit tests (doctest) and benchmarks,100.0,100.0,100.0,100.0,0.0,46,46,0,0,61.2,252.4,19.6,9702,833
+3,2026-10-20,3eb1860+,"Website: WebSerial, Dexie, chart, threshold form, JS tests",100.0,100.0,100.0,100.0,0.0,46,46,18,18,60.3,306.6,19.0,9702,833
+4,2026-10-20,3eb1860+,Strict hand-written number parser replaces strtod,100.0,100.0,100.0,100.0,0.0,46,46,18,18,61.4,10.9,19.3,9466,831

@@ -1,0 +1,14 @@
+%% The state machine of TemperatureMonitor. Source of diagrams/input/state-temperature_monitor.drawio.
+%% The buzzer sounds exactly while the monitor is Alarming.
+stateDiagram-v2
+    direction LR
+    Normal
+    Alarming
+    state "Sensor fault" as SensorFault
+    [*] --> Normal
+    Normal --> Alarming : TemperatureOutOfRange / startAlarm
+    Normal --> SensorFault : SensorFailed
+    Alarming --> Normal : TemperatureOk / stopAlarm
+    Alarming --> SensorFault : SensorFailed / stopAlarm
+    SensorFault --> Normal : TemperatureOk
+    SensorFault --> Alarming : TemperatureOutOfRange / startAlarm
