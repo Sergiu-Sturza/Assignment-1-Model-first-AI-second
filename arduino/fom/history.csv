@@ -4,3 +4,4 @@ iteration,date,commit,note,class_pct,state_pct,seq_measure_pct,seq_threshold_pct
 2,2026-10-20,3eb1860+,Unit tests (doctest) and benchmarks,100.0,100.0,100.0,100.0,0.0,46,46,0,0,61.2,252.4,19.6,9702,833
 3,2026-10-20,3eb1860+,"Website: WebSerial, Dexie, chart, threshold form, JS tests",100.0,100.0,100.0,100.0,0.0,46,46,18,18,60.3,306.6,19.0,9702,833
 4,2026-10-20,3eb1860+,Strict hand-written number parser replaces strtod,100.0,100.0,100.0,100.0,0.0,46,46,18,18,61.4,10.9,19.3,9466,831
+5,2026-10-27,d2bd898,Fix buzzer and added buttons for threshold,100.0,100.0,100.0,100.0,0.0,56,56,18,18,62.5,11.1,19.3,12608,950

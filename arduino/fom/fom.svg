@@ -13,16 +13,18 @@
 <line class="g" x1="56" x2="454" y1="50.0" y2="50.0"/>
 <text class="a" x="50" y="54.0" text-anchor="end">100.0 %</text>
 <text class="a" x="56.0" y="230" text-anchor="middle">0</text>
-<text class="a" x="155.5" y="230" text-anchor="middle">1</text>
-<text class="a" x="255.0" y="230" text-anchor="middle">2</text>
-<text class="a" x="354.5" y="230" text-anchor="middle">3</text>
-<text class="a" x="454.0" y="230" text-anchor="middle">4</text>
-<polyline class="l" points="56.0,50.0 155.5,212.0 255.0,212.0 354.5,212.0 454.0,212.0"/>
+<text class="a" x="135.6" y="230" text-anchor="middle">1</text>
+<text class="a" x="215.2" y="230" text-anchor="middle">2</text>
+<text class="a" x="294.8" y="230" text-anchor="middle">3</text>
+<text class="a" x="374.4" y="230" text-anchor="middle">4</text>
+<text class="a" x="454.0" y="230" text-anchor="middle">5</text>
+<polyline class="l" points="56.0,50.0 135.6,212.0 215.2,212.0 294.8,212.0 374.4,212.0 454.0,212.0"/>
 <circle class="p" cx="56.0" cy="50.0" r="5"><title>iteration 0: 100.0 % – Design only: UML model drawn, no C++ yet</title></circle>
-<circle class="p" cx="155.5" cy="212.0" r="5"><title>iteration 1: 0.0 % – First C++ core, scenarios and Arduino sketch</title></circle>
-<circle class="p" cx="255.0" cy="212.0" r="5"><title>iteration 2: 0.0 % – Unit tests (doctest) and benchmarks</title></circle>
-<circle class="p" cx="354.5" cy="212.0" r="5"><title>iteration 3: 0.0 % – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
-<circle class="p" cx="454.0" cy="212.0" r="5"><title>iteration 4: 0.0 % – Strict hand-written number parser replaces strtod</title></circle>
+<circle class="p" cx="135.6" cy="212.0" r="5"><title>iteration 1: 0.0 % – First C++ core, scenarios and Arduino sketch</title></circle>
+<circle class="p" cx="215.2" cy="212.0" r="5"><title>iteration 2: 0.0 % – Unit tests (doctest) and benchmarks</title></circle>
+<circle class="p" cx="294.8" cy="212.0" r="5"><title>iteration 3: 0.0 % – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
+<circle class="p" cx="374.4" cy="212.0" r="5"><title>iteration 4: 0.0 % – Strict hand-written number parser replaces strtod</title></circle>
+<circle class="p" cx="454.0" cy="212.0" r="5"><title>iteration 5: 0.0 % – Fix buzzer and added buttons for threshold</title></circle>
 <text class="v" x="450.0" y="202.0" text-anchor="end">0.0 %</text>
 <text class="a" x="255.0" y="244" text-anchor="middle">iteration</text>
 <text class="t" x="566" y="30">Tests passing</text>
@@ -37,14 +39,16 @@
 <line class="g" x1="566" x2="964" y1="50.0" y2="50.0"/>
 <text class="a" x="560" y="54.0" text-anchor="end">100.0 %</text>
 <text class="a" x="566.0" y="230" text-anchor="middle">0</text>
-<text class="a" x="665.5" y="230" text-anchor="middle">1</text>
-<text class="a" x="765.0" y="230" text-anchor="middle">2</text>
-<text class="a" x="864.5" y="230" text-anchor="middle">3</text>
-<text class="a" x="964.0" y="230" text-anchor="middle">4</text>
-<polyline class="l" points="765.0,50.0 864.5,50.0 964.0,50.0"/>
-<circle class="p" cx="765.0" cy="50.0" r="5"><title>iteration 2: 100.0 % – Unit tests (doctest) and benchmarks</title></circle>
-<circle class="p" cx="864.5" cy="50.0" r="5"><title>iteration 3: 100.0 % – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
-<circle class="p" cx="964.0" cy="50.0" r="5"><title>iteration 4: 100.0 % – Strict hand-written number parser replaces strtod</title></circle>
+<text class="a" x="645.6" y="230" text-anchor="middle">1</text>
+<text class="a" x="725.2" y="230" text-anchor="middle">2</text>
+<text class="a" x="804.8" y="230" text-anchor="middle">3</text>
+<text class="a" x="884.4" y="230" text-anchor="middle">4</text>
+<text class="a" x="964.0" y="230" text-anchor="middle">5</text>
+<polyline class="l" points="725.2,50.0 804.8,50.0 884.4,50.0 964.0,50.0"/>
+<circle class="p" cx="725.2" cy="50.0" r="5"><title>iteration 2: 100.0 % – Unit tests (doctest) and benchmarks</title></circle>
+<circle class="p" cx="804.8" cy="50.0" r="5"><title>iteration 3: 100.0 % – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
+<circle class="p" cx="884.4" cy="50.0" r="5"><title>iteration 4: 100.0 % – Strict hand-written number parser replaces strtod</title></circle>
+<circle class="p" cx="964.0" cy="50.0" r="5"><title>iteration 5: 100.0 % – Fix buzzer and added buttons for threshold</title></circle>
 <text class="v" x="960.0" y="40.0" text-anchor="end">100.0 %</text>
 <text class="a" x="765.0" y="244" text-anchor="middle">iteration</text>
 <text class="t" x="56" y="300">TemperatureMonitor::update(), host</text>
@@ -59,15 +63,17 @@
 <line class="g" x1="56" x2="454" y1="320.0" y2="320.0"/>
 <text class="a" x="50" y="324.0" text-anchor="end">80 ns</text>
 <text class="a" x="56.0" y="500" text-anchor="middle">0</text>
-<text class="a" x="155.5" y="500" text-anchor="middle">1</text>
-<text class="a" x="255.0" y="500" text-anchor="middle">2</text>
-<text class="a" x="354.5" y="500" text-anchor="middle">3</text>
-<text class="a" x="454.0" y="500" text-anchor="middle">4</text>
-<polyline class="l" points="255.0,358.1 354.5,359.9 454.0,357.7"/>
-<circle class="p" cx="255.0" cy="358.1" r="5"><title>iteration 2: 61 ns – Unit tests (doctest) and benchmarks</title></circle>
-<circle class="p" cx="354.5" cy="359.9" r="5"><title>iteration 3: 60 ns – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
-<circle class="p" cx="454.0" cy="357.7" r="5"><title>iteration 4: 61 ns – Strict hand-written number parser replaces strtod</title></circle>
-<text class="v" x="450.0" y="347.7" text-anchor="end">61 ns</text>
+<text class="a" x="135.6" y="500" text-anchor="middle">1</text>
+<text class="a" x="215.2" y="500" text-anchor="middle">2</text>
+<text class="a" x="294.8" y="500" text-anchor="middle">3</text>
+<text class="a" x="374.4" y="500" text-anchor="middle">4</text>
+<text class="a" x="454.0" y="500" text-anchor="middle">5</text>
+<polyline class="l" points="215.2,358.1 294.8,359.9 374.4,357.7 454.0,355.4"/>
+<circle class="p" cx="215.2" cy="358.1" r="5"><title>iteration 2: 61 ns – Unit tests (doctest) and benchmarks</title></circle>
+<circle class="p" cx="294.8" cy="359.9" r="5"><title>iteration 3: 60 ns – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
+<circle class="p" cx="374.4" cy="357.7" r="5"><title>iteration 4: 61 ns – Strict hand-written number parser replaces strtod</title></circle>
+<circle class="p" cx="454.0" cy="355.4" r="5"><title>iteration 5: 62 ns – Fix buzzer and added buttons for threshold</title></circle>
+<text class="v" x="450.0" y="345.4" text-anchor="end">62 ns</text>
 <text class="a" x="255.0" y="514" text-anchor="middle">iteration</text>
 <text class="t" x="566" y="300">CommandParser::parse(), host</text>
 <line class="g" x1="566" x2="964" y1="482.0" y2="482.0"/>
@@ -81,17 +87,19 @@
 <line class="g" x1="566" x2="964" y1="320.0" y2="320.0"/>
 <text class="a" x="560" y="324.0" text-anchor="end">400 ns</text>
 <text class="a" x="566.0" y="500" text-anchor="middle">0</text>
-<text class="a" x="665.5" y="500" text-anchor="middle">1</text>
-<text class="a" x="765.0" y="500" text-anchor="middle">2</text>
-<text class="a" x="864.5" y="500" text-anchor="middle">3</text>
-<text class="a" x="964.0" y="500" text-anchor="middle">4</text>
-<polyline class="l" points="765.0,379.8 864.5,357.8 964.0,477.6"/>
-<circle class="p" cx="765.0" cy="379.8" r="5"><title>iteration 2: 252 ns – Unit tests (doctest) and benchmarks</title></circle>
-<circle class="p" cx="864.5" cy="357.8" r="5"><title>iteration 3: 307 ns – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
-<circle class="p" cx="964.0" cy="477.6" r="5"><title>iteration 4: 11 ns – Strict hand-written number parser replaces strtod</title></circle>
-<text class="v" x="960.0" y="467.6" text-anchor="end">11 ns</text>
+<text class="a" x="645.6" y="500" text-anchor="middle">1</text>
+<text class="a" x="725.2" y="500" text-anchor="middle">2</text>
+<text class="a" x="804.8" y="500" text-anchor="middle">3</text>
+<text class="a" x="884.4" y="500" text-anchor="middle">4</text>
+<text class="a" x="964.0" y="500" text-anchor="middle">5</text>
+<polyline class="l" points="725.2,379.8 804.8,357.8 884.4,477.6 964.0,477.5"/>
+<circle class="p" cx="725.2" cy="379.8" r="5"><title>iteration 2: 252 ns – Unit tests (doctest) and benchmarks</title></circle>
+<circle class="p" cx="804.8" cy="357.8" r="5"><title>iteration 3: 307 ns – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
+<circle class="p" cx="884.4" cy="477.6" r="5"><title>iteration 4: 11 ns – Strict hand-written number parser replaces strtod</title></circle>
+<circle class="p" cx="964.0" cy="477.5" r="5"><title>iteration 5: 11 ns – Fix buzzer and added buttons for threshold</title></circle>
+<text class="v" x="960.0" y="467.5" text-anchor="end">11 ns</text>
 <text class="a" x="765.0" y="514" text-anchor="middle">iteration</text>
-<text class="t" x="56" y="570">Firmware flash, Arduino UNO</text>
+<text class="t" x="56" y="570">Firmware flash, Arduino Mega</text>
 <line class="g" x1="56" x2="454" y1="752.0" y2="752.0"/>
 <text class="a" x="50" y="756.0" text-anchor="end">0 B</text>
 <line class="g" x1="56" x2="454" y1="711.5" y2="711.5"/>
@@ -103,38 +111,42 @@
 <line class="g" x1="56" x2="454" y1="590.0" y2="590.0"/>
 <text class="a" x="50" y="594.0" text-anchor="end">20 000 B</text>
 <text class="a" x="56.0" y="770" text-anchor="middle">0</text>
-<text class="a" x="155.5" y="770" text-anchor="middle">1</text>
-<text class="a" x="255.0" y="770" text-anchor="middle">2</text>
-<text class="a" x="354.5" y="770" text-anchor="middle">3</text>
-<text class="a" x="454.0" y="770" text-anchor="middle">4</text>
-<polyline class="l" points="155.5,673.4 255.0,673.4 354.5,673.4 454.0,675.3"/>
-<circle class="p" cx="155.5" cy="673.4" r="5"><title>iteration 1: 9 702 B – First C++ core, scenarios and Arduino sketch</title></circle>
-<circle class="p" cx="255.0" cy="673.4" r="5"><title>iteration 2: 9 702 B – Unit tests (doctest) and benchmarks</title></circle>
-<circle class="p" cx="354.5" cy="673.4" r="5"><title>iteration 3: 9 702 B – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
-<circle class="p" cx="454.0" cy="675.3" r="5"><title>iteration 4: 9 466 B – Strict hand-written number parser replaces strtod</title></circle>
-<text class="v" x="450.0" y="665.3" text-anchor="end">9 466 B</text>
+<text class="a" x="135.6" y="770" text-anchor="middle">1</text>
+<text class="a" x="215.2" y="770" text-anchor="middle">2</text>
+<text class="a" x="294.8" y="770" text-anchor="middle">3</text>
+<text class="a" x="374.4" y="770" text-anchor="middle">4</text>
+<text class="a" x="454.0" y="770" text-anchor="middle">5</text>
+<polyline class="l" points="135.6,673.4 215.2,673.4 294.8,673.4 374.4,675.3 454.0,649.9"/>
+<circle class="p" cx="135.6" cy="673.4" r="5"><title>iteration 1: 9 702 B – First C++ core, scenarios and Arduino sketch</title></circle>
+<circle class="p" cx="215.2" cy="673.4" r="5"><title>iteration 2: 9 702 B – Unit tests (doctest) and benchmarks</title></circle>
+<circle class="p" cx="294.8" cy="673.4" r="5"><title>iteration 3: 9 702 B – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
+<circle class="p" cx="374.4" cy="675.3" r="5"><title>iteration 4: 9 466 B – Strict hand-written number parser replaces strtod</title></circle>
+<circle class="p" cx="454.0" cy="649.9" r="5"><title>iteration 5: 12 608 B – Fix buzzer and added buttons for threshold</title></circle>
+<text class="v" x="450.0" y="639.9" text-anchor="end">12 608 B</text>
 <text class="a" x="255.0" y="784" text-anchor="middle">iteration</text>
-<text class="t" x="566" y="570">Firmware RAM, Arduino UNO</text>
+<text class="t" x="566" y="570">Firmware RAM, Arduino Mega</text>
 <line class="g" x1="566" x2="964" y1="752.0" y2="752.0"/>
 <text class="a" x="560" y="756.0" text-anchor="end">0 B</text>
 <line class="g" x1="566" x2="964" y1="711.5" y2="711.5"/>
-<text class="a" x="560" y="715.5" text-anchor="end">250 B</text>
+<text class="a" x="560" y="715.5" text-anchor="end">500 B</text>
 <line class="g" x1="566" x2="964" y1="671.0" y2="671.0"/>
-<text class="a" x="560" y="675.0" text-anchor="end">500 B</text>
+<text class="a" x="560" y="675.0" text-anchor="end">1 000 B</text>
 <line class="g" x1="566" x2="964" y1="630.5" y2="630.5"/>
-<text class="a" x="560" y="634.5" text-anchor="end">750 B</text>
+<text class="a" x="560" y="634.5" text-anchor="end">1 500 B</text>
 <line class="g" x1="566" x2="964" y1="590.0" y2="590.0"/>
-<text class="a" x="560" y="594.0" text-anchor="end">1 000 B</text>
+<text class="a" x="560" y="594.0" text-anchor="end">2 000 B</text>
 <text class="a" x="566.0" y="770" text-anchor="middle">0</text>
-<text class="a" x="665.5" y="770" text-anchor="middle">1</text>
-<text class="a" x="765.0" y="770" text-anchor="middle">2</text>
-<text class="a" x="864.5" y="770" text-anchor="middle">3</text>
-<text class="a" x="964.0" y="770" text-anchor="middle">4</text>
-<polyline class="l" points="665.5,617.1 765.0,617.1 864.5,617.1 964.0,617.4"/>
-<circle class="p" cx="665.5" cy="617.1" r="5"><title>iteration 1: 833 B – First C++ core, scenarios and Arduino sketch</title></circle>
-<circle class="p" cx="765.0" cy="617.1" r="5"><title>iteration 2: 833 B – Unit tests (doctest) and benchmarks</title></circle>
-<circle class="p" cx="864.5" cy="617.1" r="5"><title>iteration 3: 833 B – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
-<circle class="p" cx="964.0" cy="617.4" r="5"><title>iteration 4: 831 B – Strict hand-written number parser replaces strtod</title></circle>
-<text class="v" x="960.0" y="607.4" text-anchor="end">831 B</text>
+<text class="a" x="645.6" y="770" text-anchor="middle">1</text>
+<text class="a" x="725.2" y="770" text-anchor="middle">2</text>
+<text class="a" x="804.8" y="770" text-anchor="middle">3</text>
+<text class="a" x="884.4" y="770" text-anchor="middle">4</text>
+<text class="a" x="964.0" y="770" text-anchor="middle">5</text>
+<polyline class="l" points="645.6,684.5 725.2,684.5 804.8,684.5 884.4,684.7 964.0,675.0"/>
+<circle class="p" cx="645.6" cy="684.5" r="5"><title>iteration 1: 833 B – First C++ core, scenarios and Arduino sketch</title></circle>
+<circle class="p" cx="725.2" cy="684.5" r="5"><title>iteration 2: 833 B – Unit tests (doctest) and benchmarks</title></circle>
+<circle class="p" cx="804.8" cy="684.5" r="5"><title>iteration 3: 833 B – Website: WebSerial, Dexie, chart, threshold form, JS tests</title></circle>
+<circle class="p" cx="884.4" cy="684.7" r="5"><title>iteration 4: 831 B – Strict hand-written number parser replaces strtod</title></circle>
+<circle class="p" cx="964.0" cy="675.0" r="5"><title>iteration 5: 950 B – Fix buzzer and added buttons for threshold</title></circle>
+<text class="v" x="960.0" y="665.0" text-anchor="end">950 B</text>
 <text class="a" x="765.0" y="784" text-anchor="middle">iteration</text>
 </svg>
