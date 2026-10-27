@@ -37,7 +37,25 @@ namespace hal {
 
 float readCelsius(int /*pin*/) { return dht.readTemperature(); }   // NaN when it fails
 
-void writePin(int pin, bool high) { digitalWrite(pin, high ? HIGH : LOW); }
+void writePin(int pin, bool high)
+{
+    if (pin == board::buzzerPin)
+    {
+        // A square wave, not a steady HIGH: a passive buzzer is silent on DC, and an
+        // active buzzer sounds either way.
+        if (high)
+        {
+            tone(pin, board::buzzerFrequencyHz);
+        }
+        else
+        {
+            noTone(pin);
+            digitalWrite(pin, LOW);
+        }
+        return;
+    }
+    digitalWrite(pin, high ? HIGH : LOW);
+}
 
 void lcdWrite(int row, Text text)
 {

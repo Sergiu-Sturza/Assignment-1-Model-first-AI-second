@@ -62,7 +62,7 @@ simulation on the host — so every class is tested and verified without hardwar
 | Part | Pin |
 |---|---|
 | DHT11 data | D2 (with its pull-up; 3-pin modules have one) |
-| Active buzzer + | D8 (− to GND) |
+| Buzzer + (active or passive) | D8 (− to GND) |
 | LCD I2C SDA / SCL | A4 / A5, at address 0x27 (0x3F on some modules: `board_config.h`) |
 
 ## Use it
