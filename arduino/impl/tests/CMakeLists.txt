@@ -2,6 +2,7 @@
 # and its compile_commands.json never see them.
 add_executable(tempalarm_tests
     test_main.cpp
+    test_button.cpp
     test_buzzer.cpp
     test_command_handler.cpp
     test_command_parser.cpp
@@ -12,6 +13,7 @@ add_executable(tempalarm_tests
     test_temperature_monitor.cpp
     test_temperature_sensor.cpp
     test_threshold.cpp
+    test_threshold_editor.cpp
 )
 target_link_libraries(tempalarm_tests PRIVATE tempalarm)
 target_include_directories(tempalarm_tests SYSTEM PRIVATE third_party)

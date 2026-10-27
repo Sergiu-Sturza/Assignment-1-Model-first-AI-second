@@ -3,6 +3,13 @@
 classDiagram
     direction TB
 
+    class Button {
+        -int pin
+        -bool down
+        -uint32_t changedMs
+        +wasPressed(uint32_t nowMs) bool
+    }
+
     class Buzzer {
         -int pin
         -bool on
@@ -71,10 +78,17 @@ classDiagram
         +isDue(uint32_t nowMs) bool
     }
 
+    class ThresholdLimit {
+        <<enumeration>>
+        Low
+        High
+    }
+
     class LcdDisplay {
         -int columns
         +showTemperature(float celsius, TemperatureStatus status) void
         +showSensorError() void
+        +showThreshold(Threshold threshold, ThresholdLimit selected) void
     }
 
     class TemperatureSensor {
@@ -91,12 +105,18 @@ classDiagram
         -stopAlarm() void
     }
 
+    class ThresholdEditor {
+        -ThresholdLimit selected
+        +poll(uint32_t nowMs) void
+    }
+
     CommandParser ..> Command
     MessageFormatter ..> Threshold
     CommandHandler --> "1" SerialLink : link
     CommandHandler --> "1" Threshold : threshold
     CommandHandler *-- "1" CommandParser : parser
     CommandHandler *-- "1" MessageFormatter : formatter
+    LcdDisplay ..> Threshold
     TemperatureMonitor --> "1" TemperatureSensor : sensor
     TemperatureMonitor --> "1" Threshold : threshold
     TemperatureMonitor --> "1" Buzzer : buzzer
@@ -104,3 +124,10 @@ classDiagram
     TemperatureMonitor --> "1" SerialLink : link
     TemperatureMonitor *-- "1" IntervalTimer : timer
     TemperatureMonitor *-- "1" MessageFormatter : formatter
+    ThresholdEditor *-- "1" Button : selectButton
+    ThresholdEditor *-- "1" Button : upButton
+    ThresholdEditor *-- "1" Button : downButton
+    ThresholdEditor --> "1" Threshold : threshold
+    ThresholdEditor --> "1" LcdDisplay : display
+    ThresholdEditor --> "1" SerialLink : link
+    ThresholdEditor *-- "1" MessageFormatter : formatter

@@ -31,16 +31,19 @@ from umlverify.state_diagram import mermaid as state_mmd  # noqa: E402
 CLASS_LAYOUT = {
     "TemperatureMonitor": (360, 40, 260),
     "CommandHandler": (1240, 40, 200),
+    "ThresholdEditor": (800, 40, 260),
     "TemperatureSensor": (40, 330, 180),
     "Buzzer": (250, 330, 160),
     "LcdDisplay": (440, 330, 470),
     "SerialLink": (960, 330, 220),
     "Threshold": (1230, 330, 320),
+    "Button": (1600, 330, 240),
     "IntervalTimer": (40, 600, 240),
     "MessageFormatter": (320, 600, 690),
     "CommandParser": (1240, 600, 230),
     "TemperatureStatus": (40, 820, 180),
     "CommandKind": (260, 820, 180),
+    "ThresholdLimit": (480, 820, 180),
     "Command": (1240, 820, 230),
 }
 

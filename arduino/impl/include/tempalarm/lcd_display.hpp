@@ -1,6 +1,8 @@
 #pragma once
 
 #include "temperature_status.hpp"
+#include "threshold.hpp"
+#include "threshold_limit.hpp"
 
 namespace tempalarm {
 
@@ -16,6 +18,8 @@ public:
     void showTemperature(float celsius, TemperatureStatus status);
     /// "Sensor error" / "Check wiring".
     void showSensorError();
+    /// ">Low:  18.0 °C" / " High: 28.0 °C": both limits, the one the buttons change marked.
+    void showThreshold(const Threshold& threshold, ThresholdLimit selected);
 
 private:
     int columns_;

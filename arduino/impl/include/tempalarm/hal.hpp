@@ -15,6 +15,8 @@ namespace hal {
 float readCelsius(int pin);
 /// Drives output @p pin high or low.
 void writePin(int pin, bool high);
+/// Whether the push button on @p pin is held down right now (not debounced).
+bool isButtonDown(int pin);
 /// Shows @p text on LCD row @p row, from the first column.
 void lcdWrite(int row, Text text);
 /// Whether a received serial character is waiting.

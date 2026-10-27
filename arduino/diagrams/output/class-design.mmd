@@ -15,6 +15,18 @@ classDiagram
         +poll() void
     }
 
+    class ThresholdEditor {
+        -ThresholdLimit selected
+        +poll(uint32_t nowMs) void
+    }
+
+    class Button {
+        -int pin
+        -bool down
+        -uint32_t changedMs
+        +wasPressed(uint32_t nowMs) bool
+    }
+
     class TemperatureSensor {
         -int pin
         +read() float
@@ -41,6 +53,7 @@ classDiagram
         -int columns
         +showTemperature(float celsius, TemperatureStatus status) void
         +showSensorError() void
+        +showThreshold(Threshold threshold, ThresholdLimit selected) void
     }
 
     class SerialLink {
@@ -83,6 +96,12 @@ classDiagram
         SensorError
     }
 
+    class ThresholdLimit {
+        <<enumeration>>
+        Low
+        High
+    }
+
     class CommandKind {
         <<enumeration>>
         SetThreshold
@@ -102,3 +121,10 @@ classDiagram
     CommandHandler *-- "1" CommandParser : parser
     CommandHandler *-- "1" MessageFormatter : formatter
     CommandParser ..> Command
+    ThresholdEditor *-- "1" Button : selectButton
+    ThresholdEditor *-- "1" Button : upButton
+    ThresholdEditor *-- "1" Button : downButton
+    ThresholdEditor --> "1" Threshold : threshold
+    ThresholdEditor --> "1" LcdDisplay : display
+    ThresholdEditor --> "1" SerialLink : link
+    ThresholdEditor *-- "1" MessageFormatter : formatter

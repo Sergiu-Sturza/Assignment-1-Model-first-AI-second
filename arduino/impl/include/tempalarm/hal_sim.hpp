@@ -15,6 +15,8 @@ namespace sim {
 void setCelsius(float celsius);
 /// Characters that "arrive" on the serial line, read one by one by serialRead().
 void receive(const std::string& characters);
+/// Holds the push button on @p pin down (true) or lets it go (false).
+void setButton(int pin, bool down);
 /// The level last written to @p pin; false if never written.
 bool pin(int pin);
 /// The text last written to LCD row @p row.
@@ -24,7 +26,7 @@ const std::vector<std::string>& sent();
 /// Whether sent lines are kept for sent() (default true); the benchmark turns it off so
 /// that it times the classes, not the growth of this log.
 void keepSent(bool keep);
-/// Back to the start: 20 °C, nothing received or sent, every pin low, the LCD blank.
+/// Back to the start: 20 °C, nothing received or sent, every pin low, every button up, the LCD blank.
 void reset();
 
 }  // namespace sim

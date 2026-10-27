@@ -11,13 +11,13 @@
 
 ## Overview
 
-**Alignment: 100.0 %** — 72 of the 72 elements that appear in either diagram are identical in both.
+**Alignment: 100.0 %** — 91 of the 91 elements that appear in either diagram are identical in both.
 
 | | Classes | Attributes | Methods | Relations | **Total** |
 |---|--:|--:|--:|--:|--:|
-| In design | 13 | 24 | 23 | 12 | **72** |
-| In implemented design | 13 | 24 | 23 | 12 | **72** |
-| ✅ Identical | 13 | 24 | 23 | 12 | **72** |
+| In design | 16 | 30 | 26 | 19 | **91** |
+| In implemented design | 16 | 30 | 26 | 19 | **91** |
+| ✅ Identical | 16 | 30 | 26 | 19 | **91** |
 | ✏️ Changed | 0 | 0 | 0 | 0 | **0** |
 | ➖ Missing | 0 | 0 | 0 | 0 | **0** |
 | ➕ Extra | 0 | 0 | 0 | 0 | **0** |
@@ -55,6 +55,7 @@ _None._
 
 Dependencies the design already implies through a method signature. Designs rarely draw these arrows, so finding one in the implementation is not a difference.
 
+- relation `LcdDisplay ..> Threshold`
 - relation `MessageFormatter ..> Threshold`
 
 ---

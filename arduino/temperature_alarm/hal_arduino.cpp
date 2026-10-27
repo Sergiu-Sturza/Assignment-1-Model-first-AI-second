@@ -1,6 +1,6 @@
 // The Arduino implementation of the hardware seam (src/tempalarm/hal.hpp): the only file
-// that knows about the DHT11, the I2C LCD and the Serial port. The host build links
-// impl/src/hal_host.cpp, a simulation, in its place.
+// that knows about the DHT11, the I2C LCD, the buttons and the Serial port. The host build
+// links impl/src/hal_host.cpp, a simulation, in its place.
 #include <Arduino.h>
 #include <DHT.h>
 #include <LiquidCrystal_I2C.h>
@@ -23,6 +23,9 @@ void begin()
     Serial.begin(baudRate);
     pinMode(buzzerPin, OUTPUT);
     digitalWrite(buzzerPin, LOW);
+    pinMode(selectButtonPin, INPUT_PULLUP);
+    pinMode(upButtonPin, INPUT_PULLUP);
+    pinMode(downButtonPin, INPUT_PULLUP);
     dht.begin();
     lcd.init();
     lcd.backlight();
@@ -56,6 +59,8 @@ void writePin(int pin, bool high)
     }
     digitalWrite(pin, high ? HIGH : LOW);
 }
+
+bool isButtonDown(int pin) { return digitalRead(pin) == LOW; }   // pulled up, pressed to GND
 
 void lcdWrite(int row, Text text)
 {

@@ -43,3 +43,15 @@ TEST_CASE_FIXTURE(test::FreshBoard, "LcdDisplay: text is cut at a narrow display
     wide.showSensorError();
     CHECK(sim::lcdRow(0).size() == 20);
 }
+
+TEST_CASE_FIXTURE(test::FreshBoard, "LcdDisplay: the threshold, the selected limit marked")
+{
+    LcdDisplay lcd(16);
+    const tempalarm::Threshold threshold(18.0f, 28.5f);
+    lcd.showThreshold(threshold, tempalarm::ThresholdLimit::Low);
+    CHECK(sim::lcdRow(0) == ">Low:  18.0 \xDF" "C  ");
+    CHECK(sim::lcdRow(1) == " High: 28.5 \xDF" "C  ");
+    lcd.showThreshold(threshold, tempalarm::ThresholdLimit::High);
+    CHECK(sim::lcdRow(0) == " Low:  18.0 \xDF" "C  ");
+    CHECK(sim::lcdRow(1) == ">High: 28.5 \xDF" "C  ");
+}

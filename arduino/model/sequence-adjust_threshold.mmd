@@ -1,0 +1,30 @@
+%% The low limit is selected (18.0 - 28.0 °C) and the user presses the up button (D4):
+%% the low limit becomes 18.1 °C, the LCD shows it and the website is told.
+%% Source of diagrams/input/sequence-adjust_threshold.drawio.
+sequenceDiagram
+    actor Loop
+    participant ThresholdEditor
+    participant Button
+    participant Threshold
+    participant LcdDisplay
+    participant MessageFormatter
+    participant SerialLink
+    Loop->>ThresholdEditor: poll(nowMs)
+    ThresholdEditor->>Button: wasPressed(nowMs)
+    Button-->>ThresholdEditor: false
+    ThresholdEditor->>Button: wasPressed(nowMs)
+    Button-->>ThresholdEditor: true
+    ThresholdEditor->>Button: wasPressed(nowMs)
+    Button-->>ThresholdEditor: false
+    ThresholdEditor->>Threshold: getLow()
+    ThresholdEditor->>Threshold: getHigh()
+    ThresholdEditor->>Threshold: set(low, high)
+    Threshold-->>ThresholdEditor: true
+    ThresholdEditor->>LcdDisplay: showThreshold(threshold, selected)
+    LcdDisplay->>Threshold: getLow()
+    LcdDisplay->>Threshold: getHigh()
+    ThresholdEditor->>MessageFormatter: formatThreshold(threshold)
+    MessageFormatter->>Threshold: getLow()
+    MessageFormatter->>Threshold: getHigh()
+    MessageFormatter-->>ThresholdEditor: "TH,18.1,28.0"
+    ThresholdEditor->>SerialLink: writeLine(text)

@@ -1,5 +1,5 @@
 // The temperature alarm on the simulated board: a few measurements across the threshold,
-// a sensor failure, and the website changing the threshold. Prints what the LCD shows,
+// a sensor failure, the website changing the threshold, and the buttons raising it. Prints what the LCD shows,
 // whether the buzzer sounds, and every line sent to the website.
 #include <cmath>
 #include <cstdint>
@@ -9,6 +9,7 @@
 #include "tempalarm/command_handler.hpp"
 #include "tempalarm/hal_sim.hpp"
 #include "tempalarm/temperature_monitor.hpp"
+#include "tempalarm/threshold_editor.hpp"
 
 namespace sim = tempalarm::hal::sim;
 
@@ -24,6 +25,7 @@ int main()
     tempalarm::SerialLink link;
     tempalarm::TemperatureMonitor monitor(sensor, threshold, buzzer, display, link, 2000);
     tempalarm::CommandHandler commands(link, threshold);
+    tempalarm::ThresholdEditor editor(5, 4, 3, threshold, display, link);
 
     const float temperatures[] = {22.5f, 29.1f, 30.4f, NAN, 25.0f, 16.2f, 21.0f};
     std::uint32_t now = 0;
@@ -42,6 +44,18 @@ int main()
         commands.poll();
     }
     monitor.update(now);   // 21.0 °C is still inside the new range
+
+    // Select the high limit (D5), then press up (D4) twice: 22.0 -> 22.2 °C.
+    const int presses[] = {5, 4, 4};
+    for (int pin : presses)
+    {
+        sim::setButton(pin, true);
+        editor.poll(now += 100);
+        sim::setButton(pin, false);
+        editor.poll(now += 100);
+    }
+    std::printf("\nAfter the buttons: [%-16s|%-16s]\n", sim::lcdRow(0).c_str(),
+                sim::lcdRow(1).c_str());
 
     std::printf("\nSent to the website:\n");
     for (const std::string& line : sim::sent())

@@ -37,6 +37,19 @@ const char* statusText(TemperatureStatus status)
     return "Status: ERROR";
 }
 
+/// "<marker><label><value> °C", e.g. ">Low:  18.0 °C".
+void writeLimit(int row, bool selected, const char* label, float celsius, int columns)
+{
+    char line[widest + 1];
+    size_t length = detail::append(line, sizeof line, 0, selected ? ">" : " ");
+    length = detail::append(line, sizeof line, length, label);
+    length = detail::appendDecimal(line, sizeof line, length, celsius);
+    length = detail::append(line, sizeof line, length, " ");
+    length = detail::append(line, sizeof line, length, degreeSign);
+    detail::append(line, sizeof line, length, "C");
+    writeRow(row, line, columns);
+}
+
 }  // namespace
 
 LcdDisplay::LcdDisplay(int columns)
@@ -60,6 +73,12 @@ void LcdDisplay::showSensorError()
 {
     writeRow(0, "Sensor error", columns_);
     writeRow(1, "Check wiring", columns_);
+}
+
+void LcdDisplay::showThreshold(const Threshold& threshold, ThresholdLimit selected)
+{
+    writeLimit(0, selected == ThresholdLimit::Low, "Low:  ", threshold.getLow(), columns_);
+    writeLimit(1, selected == ThresholdLimit::High, "High: ", threshold.getHigh(), columns_);
 }
 
 }  // namespace tempalarm

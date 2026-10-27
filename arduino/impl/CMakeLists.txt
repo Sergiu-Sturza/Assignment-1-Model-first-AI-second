@@ -11,6 +11,7 @@ option(TEMPALARM_BUILD_BENCH "Build the benchmarks in bench/" OFF)
 # The classes of the design. The same sources (all but hal_host.cpp) are compiled for the
 # Arduino by arduino-cli, after tools/sync_firmware.py has copied them into the sketch.
 add_library(tempalarm STATIC
+    src/button.cpp
     src/buzzer.cpp
     src/command_handler.cpp
     src/command_parser.cpp
@@ -22,6 +23,7 @@ add_library(tempalarm STATIC
     src/temperature_monitor.cpp
     src/temperature_sensor.cpp
     src/threshold.cpp
+    src/threshold_editor.cpp
 )
 target_include_directories(tempalarm PUBLIC include)
 if(MSVC)
@@ -38,6 +40,8 @@ add_executable(scenario_measure_temperature scenarios/measure_temperature.cpp)
 target_link_libraries(scenario_measure_temperature PRIVATE tempalarm)
 add_executable(scenario_change_threshold scenarios/change_threshold.cpp)
 target_link_libraries(scenario_change_threshold PRIVATE tempalarm)
+add_executable(scenario_adjust_threshold scenarios/adjust_threshold.cpp)
+target_link_libraries(scenario_adjust_threshold PRIVATE tempalarm)
 
 # Built only on request, so the verifier's build and its compile_commands.json never see them.
 if(TEMPALARM_BUILD_TESTS)

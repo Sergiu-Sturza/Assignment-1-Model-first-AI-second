@@ -19,6 +19,7 @@ struct Board
     float celsius = 20.0f;
     std::deque<char> received;
     std::map<int, bool> pins;
+    std::map<int, bool> buttons;
     std::map<int, std::string> lcd;
     std::vector<std::string> sent;
     bool keepSent = true;
@@ -35,6 +36,12 @@ Board& board()
 float readCelsius(int /*pin*/) { return board().celsius; }
 
 void writePin(int pin, bool high) { board().pins[pin] = high; }
+
+bool isButtonDown(int pin)
+{
+    const auto found = board().buttons.find(pin);
+    return found != board().buttons.end() && found->second;
+}
 
 void lcdWrite(int row, Text text) { board().lcd[row] = text; }
 
@@ -63,6 +70,8 @@ void receive(const std::string& characters)
 {
     board().received.insert(board().received.end(), characters.begin(), characters.end());
 }
+
+void setButton(int pin, bool down) { board().buttons[pin] = down; }
 
 bool pin(int pin)
 {
